@@ -96,6 +96,17 @@ public :
 			}
 			cout << endl;
 		}
-
 	}
 };
+int main() {
+	Queues q;
+	char ch;
+
+
+	while (true) {
+		try {
+			cout << "Menu" << endl;
+			cout << "1. Im
+		}
+	}
+}
