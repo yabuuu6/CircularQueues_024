@@ -106,7 +106,8 @@ int main() {
 	while (true) {
 		try {
 			cout << "Menu" << endl;
-			cout << "1. Im
+			cout << "1. Implement insert oprator" << endl;
+			cout << "2. Implement delete optration" << endl;
 		}
 	}
 }
