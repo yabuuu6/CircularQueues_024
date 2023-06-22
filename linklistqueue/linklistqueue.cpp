@@ -3,7 +3,7 @@ using namespace std;
 
 class Queues {
 	int FRONT, RAER, max = 5;
-	inte queue_array(5);
+	int queue_array [5];
 
 public :
 	Queues() {
@@ -23,5 +23,13 @@ public :
 				return;
 		}
 
+		//Cek apakah antrian kosong
+		if (FRONT == -1) {
+			FRONT = 0;
+			REAR = 0;
+		}
+		else {
+			// Jika REAR berada di posisi trakhir 
+		}
 	}
 };
