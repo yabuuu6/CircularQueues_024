@@ -38,27 +38,28 @@ public :
 		queue_array[REAR] = num;
 	}
 
-	void removeo() {
+	void remove() {
 		// Cek apakah antrian kosong
 		if (FRONT == -1)
 			cout << "Queue underflow\n";
 		return;
-	}
-	cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << "\n";
+		cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << "\n";
 
-	// Cek jika antrian hanya memiliki satu elemen
-	if (FRONT == REAR) {
-		FRONT = -1;
-		REAR = -1;
-	}
-	else {
-		//jika element yang dihapus berada di posisi trakhir array, kembali ke awal array
-		if (FRONT == max - 1)
-			FRONT = 0;
-		else
-			FRONT = FRONT + 1;
+		// Cek jika antrian hanya memiliki satu elemen
+		if (FRONT == REAR) {
+			FRONT = -1;
+			REAR = -1;
+		}
+		else {
+			//jika element yang dihapus berada di posisi trakhir array, kembali ke awal array
+			if (FRONT == max - 1)
+				FRONT = 0;
+			else
+				FRONT = FRONT + 1;
 
+		}
 	}
+	
 
 	void display() {
 		int FRONT_position = FRONT;
@@ -121,7 +122,7 @@ int main() {
 				break;
 			}
 			case '2': {
-				q.removed();
+				q.remove();
 				break;
 			}
 			case '3': {
@@ -137,7 +138,7 @@ int main() {
 			}
 			}
 		}
-		catch (exception& o) {
+		catch (exception& e) {
 			cout << "Check for the values entered." << endl;
 		}
 	}
