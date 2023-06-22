@@ -2,7 +2,7 @@
 using namespace std;
 
 class Queues {
-	int FRONT, RAER, max = 5;
+	int FRONT, REAR, max = 5;
 	int queue_array [5];
 
 public :
@@ -18,7 +18,7 @@ public :
 		cout << endl;
 
 		//Cek apakah antrian penuh 
-		if ((FRONT == 0 && REAR == max - 1) || (FRONT == REAR + 1) {
+		if ((FRONT == 0 && REAR == max - 1) || (FRONT == REAR + 1)) {
 			cout << "\nQueue overflow\n";
 				return;
 		}
@@ -47,4 +47,16 @@ public :
 	cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << "\n";
 
 	// Cek jika antrian hanya memiliki satu elemen
+	if (FRONT == REAR) {
+		FRONT = -1;
+		REAR = -1;
+	}
+	else {
+		//jika element yang dihapus berada di posisi trakhir array, kembali ke awal array
+		if (FRONT == max - 1)
+			FRONT = 0;
+		else
+			FRONT = FRONT + 1;
+
+	}
 };
